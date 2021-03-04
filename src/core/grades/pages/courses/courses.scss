@@ -1,0 +1,43 @@
+
+ion-app.app-root page-core-grades-courses {
+ 
+ 
+    .activeSubject {
+      background-color: #79649c!important;
+      color: white;
+      font-size: 17px;
+      padding-left: 15px;   
+       padding: 15px;
+        }
+  
+        .normalSubject {
+          background-color: white; 
+          padding-left: 15px;
+      }
+      .iconAccordion{
+        float: right;
+      }
+      .small-image{
+        height: 40px;
+        margin-left: 60%;
+      }
+      .full-image {
+        height: 100px;
+      }
+      .btnSubjectCategory{
+        padding: 14px;
+      border-radius: 10px;
+      background-color: grey;
+      color: white;
+      }
+      .item-md{      
+        margin-left: 3px;
+      }
+     .activeSubject >ion-icon {
+        margin-right: 3px;
+        color: white;
+      }
+  
+  }
+  
+  
