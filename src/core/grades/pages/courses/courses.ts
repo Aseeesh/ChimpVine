@@ -64,6 +64,7 @@ export class CoreGradesCoursesPage {
                     category?: {categoryId: number, categoryName: string, link: string}[],
                     rawgrade: any, courseFullName: string, showCategoryDetails?: boolean, icon?: string;}[];
      icon?: string; showDetails?: boolean; }[];
+    activeActive: any;
 
     constructor(private gradesProvider: CoreGradesProvider, private domUtils: CoreDomUtilsProvider,
         private gradesHelper: CoreGradesHelperProvider,
@@ -80,8 +81,8 @@ export class CoreGradesCoursesPage {
                 { grade: '6th Grade'},
                 { grade: '7th Grade'},
                 { grade: '8th Grade'},
-                { grade: '9th Grade'},
-                { grade: '10th Grade'} 
+                // { grade: '9th Grade'},
+                // { grade: '10th Grade'} 
               
               ]
               this.categorylist = [
@@ -96,7 +97,13 @@ export class CoreGradesCoursesPage {
                        {subjectId: 14, category: this.categorylist, rawgrade: null, courseFullName: "Social Studies", showCategoryDetails: false, icon: 'ios-add-circle-outline'}];
                  element.icon= 'ios-add-circle-outline', element.showDetails= false
               });
+              this.activeActive='gradeList';
     }
+
+
+    setActiveTag(tag){
+        this.activeActive=tag; 
+        }
     toggleDetails(data) {
         if (data.showDetails) {
           data.showDetails = false;

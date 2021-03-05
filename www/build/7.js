@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 2219:
+/***/ 2218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_question_components_components_module__ = __webpack_require__(1092);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__player__ = __webpack_require__(2375);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__player__ = __webpack_require__(2374);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var AddonModQuizPlayerPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2375:
+/***/ 2374:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83,7 +83,7 @@ var AddonModQuizPlayerPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_quiz__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_quiz_sync__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_helper__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__classes_auto_save__ = __webpack_require__(2376);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__classes_auto_save__ = __webpack_require__(2375);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -780,7 +780,7 @@ var AddonModQuizPlayerPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2376:
+/***/ 2375:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

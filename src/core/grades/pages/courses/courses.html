@@ -12,51 +12,69 @@
             <core-empty-box *ngIf="grades && grades.length == 0" icon="stats" [message]="'core.grades.nogradesreturned' | translate">
             </core-empty-box>
 
-            <ion-list *ngIf="grades && grades.length > 0">
-                <a ion-item text-wrap *ngFor="let grade of grades" [title]="grade.courseFullName" (click)="gotoCourseGrades(grade.courseid)" [class.core-split-item-selected]="grade.courseid == courseId">
-                    <h2><core-format-text [text]="grade.courseFullName" contextLevel="course" [contextInstanceId]="grade.courseid"></core-format-text></h2>
-                    <ion-badge item-end color="light">{{grade.grade}}</ion-badge>
-                </a>
-            </ion-list>
-            <ion-list> 
-                <ion-item  *ngFor="let item of accordindata ; let index = index" >
-               <h3 (click)="toggleDetails(item)"  [ngClass]="(item.showDetails)?'activeSubject':'normalSubject'">
-                   <strong>{{index +1}}. {{item.grade}} </strong>
-                    <ion-icon color="primary"  class="iconAccordion" item-right [name]="item.icon"></ion-icon> </h3>   
-                     <div *ngIf="item.showDetails">
-
-                        <ion-list>
-                            <ion-item
-                              class="animate__animated animate__fadeIn animate_faster"
-                              *ngFor="let subject of item.subjectList; let indexSubject = index " >
-                             
-                                <ion-item >
-                                    <h3 (click)="toggleCatgoryDetails(subject)" [ngClass]="(subject.showCategoryDetails)?'activeSubject':'normalSubject'">
-                                        {{indexSubject +1}}.   {{subject.courseFullName}}  <ion-icon color="primary" class="iconAccordion" item-right [name]="subject.icon"></ion-icon> </h3>   
-                                          <div *ngIf="subject.showCategoryDetails">
- <div class="item-inner">
-                                        
-                                                 <ion-item (click)="GetTagDetails(item.grade+'/'+subject.courseFullName+'/'+itemCategory.categoryName)" 
-                                                   class="animate__animated animate__fadeIn animate_faster"
-                                                   *ngFor="let itemCategory of subject.category " >
-                                                   <div class="input-wrapper">
-                                                          <div class="input-wrapper">
-                                                     <button class="btnSubjectCategory"> {{itemCategory.categoryName}}</button> 
-</div>
-</div>
-                                                     
-                                     </ion-item>
- 
-</div>
-                                     </div>
-                                     </ion-item>
-
-
-                </ion-item>
-            </ion-list>  
-                </div>
-                </ion-item>
-              </ion-list>  
+          
+            <ion-segment >
+                <ion-segment-button   (click)="setActiveTag('gradeList')"
+                [ngClass]="activeActive=='gradeList'?'activeTab':'tab'" >
+                  Grade-List
+                </ion-segment-button>
+                <ion-segment-button    (click)="setActiveTag('gradeScore')"
+                [ngClass]="activeActive=='gradeScore'?'activeTab':'tab'" >
+                  Grade-Score
+                </ion-segment-button>
+              </ion-segment>
+              <ion-list-header *ngIf="activeActive=='gradeList'"> 
+                <ion-list> 
+                    <ion-item  *ngFor="let item of accordindata ; let index = index" >
+                   <h3 (click)="toggleDetails(item)"  [ngClass]="(item.showDetails)?'activeSubject':'normalSubject'">
+                       <strong>{{index +1}}. {{item.grade}} </strong>
+                        <ion-icon color="primary"  class="iconAccordion" item-right [name]="item.icon"></ion-icon> </h3>   
+                         <div *ngIf="item.showDetails">
+    
+                            <ion-list>
+                                <ion-item
+                                  class="animate__animated animate__fadeIn animate_faster"
+                                  *ngFor="let subject of item.subjectList; let indexSubject = index " >
+                                 
+                                    <ion-item >
+                                        <h3 (click)="toggleCatgoryDetails(subject)" [ngClass]="(subject.showCategoryDetails)?'activeSubject':'normalSubject'">
+                                            {{indexSubject +1}}.   {{subject.courseFullName}}  <ion-icon color="primary" class="iconAccordion" item-right [name]="subject.icon"></ion-icon> </h3>   
+                                              <div *ngIf="subject.showCategoryDetails">
+     <div class="item-inner">
+                                            
+                                                     <ion-item (click)="GetTagDetails(item.grade+'/'+subject.courseFullName+'/'+itemCategory.categoryName)" 
+                                                       class="animate__animated animate__fadeIn animate_faster"
+                                                       *ngFor="let itemCategory of subject.category " >
+                                                       <div class="input-wrapper">
+                                                              <div class="input-wrapper">
+                                                         <button class="btnSubjectCategory"> {{itemCategory.categoryName}}</button> 
+    </div>
+    </div>
+                                                         
+                                         </ion-item>
+     
+    </div>
+                                         </div>
+                                         </ion-item>
+    
+    
+                    </ion-item>
+                </ion-list>  
+                    </div>
+                    </ion-item>
+                  </ion-list>  
+              </ion-list-header>
+              <ion-list-header *ngIf="activeActive=='gradeScore'"> 
+                <ion-list *ngIf="grades && grades.length > 0">
+                    <a ion-item text-wrap *ngFor="let grade of grades" [title]="grade.courseFullName" (click)="gotoCourseGrades(grade.courseid)" [class.core-split-item-selected]="grade.courseid == courseId">
+                        <h2><core-format-text [text]="grade.courseFullName" contextLevel="course" [contextInstanceId]="grade.courseid"></core-format-text></h2>
+                        <ion-badge item-end color="light">{{grade.grade}}</ion-badge>
+                    </a>
+                </ion-list>
+              </ion-list-header>
+            
         </core-loading>
+       
+ 
     </ion-content>
 </core-split-view>

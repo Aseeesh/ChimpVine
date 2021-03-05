@@ -249,7 +249,7 @@ export class CoreMainMenuProvider {
             const handler = handlers.find((handler, i) => {
                 return handler.page == pageName;
             });
-
+debugger
             return !!handler;
         });
     }

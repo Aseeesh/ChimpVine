@@ -1,6 +1,6 @@
 webpackJsonp([136],{
 
-/***/ 2159:
+/***/ 2160:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plan__ = __webpack_require__(2315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plan__ = __webpack_require__(2316);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var AddonCompetencyPlanPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2315:
+/***/ 2316:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

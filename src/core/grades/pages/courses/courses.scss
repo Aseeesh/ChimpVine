@@ -37,7 +37,16 @@ ion-app.app-root page-core-grades-courses {
         margin-right: 3px;
         color: white;
       }
-  
+  .tab{
+    color: black;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  .activeTab{
+    color: #fff;
+    background-color: rgb(75, 73, 73);
+    font-size: 16px;
+  }
   }
   
   

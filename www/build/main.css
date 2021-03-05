@@ -59012,6 +59012,18 @@ ion-app.app-root page-core-grades-courses .activeSubject > ion-icon {
   color: white;
 }
 
+ion-app.app-root page-core-grades-courses .tab {
+  color: black;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+ion-app.app-root page-core-grades-courses .activeTab {
+  color: #fff;
+  background-color: #4b4949;
+  font-size: 16px;
+}
+
 ion-app.app-root core-h5p-player .core-h5p-placeholder {
   position: relative;
   width: 100%;

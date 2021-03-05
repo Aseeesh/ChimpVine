@@ -32,6 +32,7 @@ resources/ios/icon
 resources/ios/splash
 resources/windows/icon
 resources/windows/splash
+www/build
 !www/README.md
 $RECYCLE.BIN/
 

@@ -78,7 +78,6 @@ export class CoreMainMenuMorePage implements OnDestroy {
         // Load the handlers.
         this.subscription = this.menuDelegate.getHandlers().subscribe((handlers) => {
             this.allHandlers = handlers;
-
             this.initHandlers();
         });
 
@@ -114,6 +113,7 @@ export class CoreMainMenuMorePage implements OnDestroy {
             });
 
             this.handlersLoaded = this.menuDelegate.areHandlersLoaded();
+            
         }
     }
 

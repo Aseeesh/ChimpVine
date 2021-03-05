@@ -1,6 +1,6 @@
 webpackJsonp([129],{
 
-/***/ 2169:
+/***/ 2168:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__group_conversations__ = __webpack_require__(2325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__group_conversations__ = __webpack_require__(2324);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(69);
@@ -63,7 +63,7 @@ var AddonMessagesGroupConversationsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2325:
+/***/ 2324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
