@@ -71,16 +71,16 @@ export class CoreGradesCoursesPage {
         private tagProvider: CoreTagProvider,
         private tagAreaDelegate: CoreTagAreaDelegate) {
             this.accordindata=[
-                { grade: 'Pre-k '},
-                { grade: 'KinderGarden '},
-                { grade: '1st Grade '},
-                { grade: '2nd Grade '},
-                { grade: '3rd Grade '},
-                { grade: '4th Grade'},
-                { grade: '5th Grade'},
-                { grade: '6th Grade'},
-                { grade: '7th Grade'},
-                { grade: '8th Grade'},
+                { grade: 'Pre-k'},
+                { grade: 'Kindergarten'},
+                { grade: 'Grade1'},
+                { grade: 'Grade2'},
+                { grade: 'Grade3'},
+                { grade: 'Grade4'},
+                { grade: 'Grade5'},
+                { grade: 'Grade6'},
+                { grade: 'Grade7'},
+                { grade: 'Grade8'},
                 // { grade: '9th Grade'},
                 // { grade: '10th Grade'} 
               

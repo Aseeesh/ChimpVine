@@ -1,6 +1,6 @@
 webpackJsonp([37],{
 
-/***/ 2270:
+/***/ 2267:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSiteOnboardingPageModule", function() { return CoreLoginSiteOnboardingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_onboarding__ = __webpack_require__(2430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_onboarding__ = __webpack_require__(2427);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(13);
@@ -60,7 +60,7 @@ var CoreLoginSiteOnboardingPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2430:
+/***/ 2427:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

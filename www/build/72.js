@@ -1,6 +1,6 @@
 webpackJsonp([72],{
 
-/***/ 2231:
+/***/ 2230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(487);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__assessment__ = __webpack_require__(2389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__assessment__ = __webpack_require__(2388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_editor_components_components_module__ = __webpack_require__(140);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -66,7 +66,7 @@ var AddonModWorkshopAssessmentPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2389:
+/***/ 2388:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
