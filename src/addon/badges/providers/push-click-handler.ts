@@ -24,7 +24,7 @@ import { AddonBadgesProvider } from './badges';
 @Injectable()
 export class AddonBadgesPushClickHandler implements CorePushNotificationsClickHandler {
     name = 'AddonBadgesPushClickHandler';
-    priority = 0;//200;
+    priority = 200;
     featureName = 'CoreUserDelegate_AddonBadges';
 
     constructor(private utils: CoreUtilsProvider, private badgesProvider: AddonBadgesProvider,

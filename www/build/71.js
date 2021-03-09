@@ -1,6 +1,6 @@
 webpackJsonp([71],{
 
-/***/ 2231:
+/***/ 2233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11,7 +11,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_submission__ = __webpack_require__(2389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_submission__ = __webpack_require__(2391);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_editor_components_components_module__ = __webpack_require__(140);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -63,7 +63,7 @@ var AddonModWorkshopEditSubmissionPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2389:
+/***/ 2391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

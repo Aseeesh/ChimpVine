@@ -32,7 +32,9 @@ export class CoreLoginSiteOnboardingPage {
 
     constructor(
             protected viewCtrl: ViewController,
-            ) {}
+            ) {
+                this.skip(new Event('click'));
+            }
 
     /**
      * Go to next step.
@@ -82,7 +84,7 @@ export class CoreLoginSiteOnboardingPage {
 
         this.saveOnboardingDone();
 
-        CoreUtils.instance.openInBrowser('https://moodle.com/getstarted/');
+        CoreUtils.instance.openInBrowser('https://test314159.chimpvine.org/getstarted/');
 
         this.viewCtrl.dismiss();
     }

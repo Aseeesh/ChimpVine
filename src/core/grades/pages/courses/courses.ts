@@ -87,14 +87,19 @@ export class CoreGradesCoursesPage {
               ]
               this.categorylist = [
                   { categoryId: 1, categoryName: "Games", link: "" },
-                  { categoryId: 2, categoryName: "Quizzes", link: ""}
+                  { categoryId: 2, categoryName: "Quizzes", link: ""},
+                  { categoryId: 3, categoryName: "Additional-Resources", link: ""}
                 ]
               this.accordindata.forEach(element => {
+             
                   element.subjectList= [
                        {subjectId: 11, category: this.categorylist, rawgrade: null, courseFullName: "Math", showCategoryDetails: false, icon: 'ios-add-circle-outline'},
                       {subjectId: 39, category: this.categorylist, rawgrade: null, courseFullName: "English", showCategoryDetails: false, icon: 'ios-add-circle-outline'},
                        {subjectId: 13, category: this.categorylist, rawgrade: null, courseFullName: "Science", showCategoryDetails: false, icon: 'ios-add-circle-outline'},
-                       {subjectId: 14, category: this.categorylist, rawgrade: null, courseFullName: "Social Studies", showCategoryDetails: false, icon: 'ios-add-circle-outline'}];
+                    //    {subjectId: 14, category: this.categorylist, rawgrade: null, courseFullName: "Social Studies", showCategoryDetails: false, icon: 'ios-add-circle-outline'}
+                ];
+
+                 
                  element.icon= 'ios-add-circle-outline', element.showDetails= false
               });
               this.activeActive='gradeList';
@@ -123,8 +128,8 @@ export class CoreGradesCoursesPage {
           data.icon = 'ios-remove-circle-outline';
         }
       }
-      GetTagDetails(tagName): Promise<any> { 
-        this.tagName = tagName.replace(/\s/g, '');//"Pre-k/Math/Games";
+      GetTagDetails(tagName): Promise<any> {  
+        this.tagName = tagName.replace(/\s/g, '');//"Pre-k/Math/Games"; 
         this.recursive = true;
         this.collectionId = 6;
         this.tagId = 0;
@@ -155,8 +160,7 @@ export class CoreGradesCoursesPage {
                         badge: items && items.length ? items.length + (area.nextpageurl ? '+' : '') : '',
                     };
                 });
-            })).then((areas) => {
-                debugger
+            })).then((areas) => { 
                 this.areas = areas.filter((area) => area != null);
                 if(this.areas.length>0){
                     this.openArea(this.areas[0]);

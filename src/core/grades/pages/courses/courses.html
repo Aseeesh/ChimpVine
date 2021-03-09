@@ -41,18 +41,24 @@
                                             {{indexSubject +1}}.   {{subject.courseFullName}}  <ion-icon color="primary" class="iconAccordion" item-right [name]="subject.icon"></ion-icon> </h3>   
                                               <div *ngIf="subject.showCategoryDetails">
      <div class="item-inner">
+       
                                             
-                                                     <ion-item (click)="GetTagDetails(item.grade+'/'+subject.courseFullName+'/'+itemCategory.categoryName)" 
+                                                     <ion-item 
                                                        class="animate__animated animate__fadeIn animate_faster"
                                                        *ngFor="let itemCategory of subject.category " >
                                                        <div class="input-wrapper">
                                                               <div class="input-wrapper">
-                                                         <button class="btnSubjectCategory"> {{itemCategory.categoryName}}</button> 
-    </div>
-    </div>
+                                                         <button  *ngIf="itemCategory.categoryName !== 'Additional-Resources'"
+                                                         (click)="GetTagDetails(item.grade+'/'+subject.courseFullName+'/'+itemCategory.categoryName)" 
+                                                         class="btnSubjectCategory"> {{itemCategory.categoryName}}</button>    
+                                                             <button  *ngIf="itemCategory.categoryName === 'Additional-Resources'"
+                                            (click)="GetTagDetails(subject.courseFullName+'/Blogs')"
+                                             class="btnSubjectCategory"> {{itemCategory.categoryName}}</button> 
+                                        </div>
+                                        </div>
                                                          
                                          </ion-item>
-     
+                        
     </div>
                                          </div>
                                          </ion-item>

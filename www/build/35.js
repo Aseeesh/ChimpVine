@@ -1,6 +1,6 @@
 webpackJsonp([35],{
 
-/***/ 2270:
+/***/ 2269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitePageModule", function() { return CoreLoginSitePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site__ = __webpack_require__(2430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site__ = __webpack_require__(2429);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(13);
@@ -60,7 +60,7 @@ var CoreLoginSitePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2430:
+/***/ 2429:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -190,7 +190,7 @@ var CoreLoginSitePage = /** @class */ (function () {
         this.hasSites = false;
         this.loadingSites = false;
         this.showKeyboard = !!navParams.get('showKeyboard');
-        var url = '';
+        var url = 'https://test314159.chimpvine.org/';
         this.siteSelector = __WEBPACK_IMPORTED_MODULE_12__configconstants__["a" /* CoreConfigConstants */].multisitesdisplay;
         var siteFinderSettings = __WEBPACK_IMPORTED_MODULE_12__configconstants__["a" /* CoreConfigConstants */]['sitefindersettings'] || {};
         this.siteFinderSettings = __assign({ displaysitename: true, displayimage: true, displayalias: true, displaycity: true, displaycountry: true, displayurl: true }, siteFinderSettings);
@@ -253,6 +253,7 @@ var CoreLoginSitePage = /** @class */ (function () {
                 }
             });
         }); }, 1000);
+        this.connect(new Event('click'), url);
     }
     /**
      * Extend info of Login Site Info to get UI tweaks.

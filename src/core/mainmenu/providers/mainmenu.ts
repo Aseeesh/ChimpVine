@@ -248,8 +248,7 @@ export class CoreMainMenuProvider {
         return this.getCurrentMainMenuHandlers().then((handlers) => {
             const handler = handlers.find((handler, i) => {
                 return handler.page == pageName;
-            });
-debugger
+            }); 
             return !!handler;
         });
     }

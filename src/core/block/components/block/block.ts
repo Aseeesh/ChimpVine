@@ -109,8 +109,7 @@ export class CoreBlockComponent implements OnInit, OnDestroy, DoCheck {
                     instanceId: this.instanceId,
                     link: data.link || null,
                     linkParams: data.linkParams || null,
-                }, this.extraData || {}, data.componentData || {});
-                debugger
+                }, this.extraData || {}, data.componentData || {}); 
         }).catch(() => {
             // Ignore errors.
         }).finally(() => {
