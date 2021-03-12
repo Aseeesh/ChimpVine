@@ -131,7 +131,13 @@ export class CoreGradesCoursesPage {
       GetTagDetails(tagName): Promise<any> {  
         this.tagName = tagName.replace(/\s/g, '');//"Pre-k/Math/Games"; 
         this.recursive = true;
+        if(tagName=="Math/Blogs"||tagName=="English/Blogs"||tagName=="Science/Blogs"){
+            
+        this.collectionId = 7;
+        }else{
+
         this.collectionId = 6;
+        }
         this.tagId = 0;
         this.fromContextId = 0;
         this.areaId = 0;
