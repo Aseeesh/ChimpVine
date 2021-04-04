@@ -103,6 +103,7 @@ export class CoreGradesCoursesPage {
                  element.icon= 'ios-add-circle-outline', element.showDetails= false
               });
               this.activeActive='gradeList';
+               
     }
 
 
@@ -113,9 +114,11 @@ export class CoreGradesCoursesPage {
         if (data.showDetails) {
           data.showDetails = false;
           data.icon = 'ios-add-circle-outline';
+          this.showTabs();
         } else {
           data.showDetails = true;
           data.icon = 'ios-remove-circle-outline';
+          this.hideTabs();
         }
       }
 
@@ -168,6 +171,7 @@ export class CoreGradesCoursesPage {
                 });
             })).then((areas) => { 
                 this.areas = areas.filter((area) => area != null);
+                
                 if(this.areas.length>0){
                     this.openArea(this.areas[0]);
                 }
@@ -176,7 +180,20 @@ export class CoreGradesCoursesPage {
             this.domUtils.showErrorModalDefault(error, 'Error loading tag index');
         });
     }
-
+    public hideTabs() {
+      const tabBar = document.getElementById('myTabBar');
+    //    const tobBar =  document.getElementsByClassName('header header-md')[0].style.display='flex';
+    //  const bottomBar = document.getElementsByClassName('tabbar')[0].style.display='flex'
+        //header header-md
+        
+        if (tabBar !== null && tabBar.style.display !== 'none') tabBar.style.display = 'none';
+      }
+      
+      public showTabs() {
+        const tabBar = document.getElementById('myTabBar');
+        
+        if (tabBar !== null && tabBar.style.display !== 'flex') tabBar.style.display = 'flex';
+      }
     openArea(area: any): void {
         
         this.selectedAreaId = area.id; 

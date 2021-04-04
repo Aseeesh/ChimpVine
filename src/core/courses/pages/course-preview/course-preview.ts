@@ -222,7 +222,7 @@ export class CoreCoursesCoursePreviewPage implements OnDestroy {
             // Check if user is enrolled in the course.
             return this.coursesProvider.getUserCourse(this.course.id).then((course) => {
                 this.isEnrolled = true;
-
+debugger
                 return course;
             }).catch(() => {
                 // The user is not enrolled in the course. Use getCourses to see if it's an admin/manager and can see the course.

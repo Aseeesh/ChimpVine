@@ -18,6 +18,8 @@ import { IonicPage, NavParams } from 'ionic-angular';
 import { CoreDomUtilsProvider } from '@providers/utils/dom';
 import { CoreTagProvider } from '@core/tag/providers/tag';
 import { CoreTagAreaDelegate } from '@core/tag/providers/area-delegate';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
+
 
 /**
  * Page that displays the tag index area.
@@ -47,7 +49,8 @@ export class CoreTagIndexAreaPage {
 
     constructor(navParams: NavParams, private injector: Injector, private translate: TranslateService,
             private tagProvider: CoreTagProvider, private domUtils: CoreDomUtilsProvider,
-            private tagAreaDelegate: CoreTagAreaDelegate) {
+            private tagAreaDelegate: CoreTagAreaDelegate,
+            private screenOrientation: ScreenOrientation) {
         this.tagId = navParams.get('tagId');
         this.tagName = navParams.get('tagName');
         this.collectionId = navParams.get('collectionId');
@@ -62,7 +65,22 @@ export class CoreTagIndexAreaPage {
         this.itemType = navParams.get('itemType');
         this.items = navParams.get('items') || [];
         this.nextPage = navParams.get('nextPage') || 0;
-        this.canLoadMore = !!navParams.get('canLoadMore');
+        this.canLoadMore = !!navParams.get('canLoadMore'); 
+        this.screenOrientation.onChange().subscribe(
+            () => {
+               
+                if(this.screenOrientation.type=="landscape-primary"){
+                    Array.from(document.getElementsByClassName('header') as HTMLCollectionOf<HTMLElement>)[0].style.display='none';
+                    Array.from(document.getElementsByClassName('tabbar') as HTMLCollectionOf<HTMLElement>)[0].style.display='none';
+         
+                }else{
+                    Array.from(document.getElementsByClassName('header') as HTMLCollectionOf<HTMLElement>)[0].style.display='flex';
+            Array.from(document.getElementsByClassName('tabbar') as HTMLCollectionOf<HTMLElement>)[0].style.display='flex';
+     
+                }
+               // console.log("Orientation Changed");
+            }
+         );
     }
 
     /**
@@ -98,7 +116,7 @@ export class CoreTagIndexAreaPage {
         return this.tagProvider.getTagIndexPerArea(this.tagId, this.tagName, this.collectionId, this.areaId, this.fromContextId,
                 this.contextId, this.recursive, page).then((areas) => {
             const area = areas[0];
-
+            const test=this.screenOrientation.type;
             return this.tagAreaDelegate.parseContent(area.component, area.itemtype, area.content).then((items) => {
                 if (!items || !items.length) {
                     // Tag area not supported.

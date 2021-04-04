@@ -92,7 +92,7 @@ export class CoreLoginSitePage {
 
         this.showKeyboard = !!navParams.get('showKeyboard');
 
-        let url = 'https://test314159.chimpvine.org/';
+        let url = 'https://chimpvine.org';
         this.siteSelector = CoreConfigConstants.multisitesdisplay;
 
         const siteFinderSettings: Partial<SiteFinderSettings> = CoreConfigConstants['sitefindersettings'] || {};
